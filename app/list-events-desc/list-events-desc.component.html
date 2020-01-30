@@ -1,0 +1,32 @@
+<div  class="container">
+        <h1 style="text-align: center;">Events List</h1>
+        <br>
+        <a class="btn btn-primary" routerLink="/insert-event-desc"> Insert new event </a>
+        <hr>
+            <table style="align-content: center;" class="table table-condensed table-striped table-responsive table-hover">
+                    <thead>
+                        <th style="text-align: center;">Event Desc Id</th>
+                        <th style="text-align: center;">Event Name</th>
+                        <th style="text-align: center;">Event Cost</th>
+                        <th style="text-align: center;">Manager Name</th>
+                        <th style="text-align: center;"></th>
+                    </thead>
+                    <tbody style="text-align: center;">
+                        <tr *ngFor="let item of eventDesc">
+                            <td>{{item.eventDescId}}</td>  
+                            <td>{{item.eventName}}</td>   
+                            <td>{{item.eventCost}}</td>
+                            <td>{{item.mgr.user.name}}</td>
+    
+                            <td> 
+                                    <a class="btn btn-primary" routerLink="/edit-event-desc/{{item.eventDescId}}"> Edit </a> 
+                            </td>
+                            <td> 
+                                    <a class="btn btn-danger" routerLink="/delete-event-desc/{{item.eventDescId}}"> Delete </a> 
+                            </td>
+    
+                        </tr>         
+                    </tbody>
+                  </table>
+                
+    </div>

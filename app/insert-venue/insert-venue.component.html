@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+                        .bg-img {
+          /* The image used */
+          background-color: azure;
+          margin-top: 0%;
+          min-height: 640px;
+        
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+        body,html{
+          height: 100%;
+        }
+                
+                
+                </style>
+</head>
+<body class="bg-img">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                 </div>
+                <div style="margin-top: 10px;">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="container" style="opacity: 0.9; background-color:snow; height: 300px; width: 500px; margin-top: 220px">
+                                            <form #myForm = "ngForm"  (ngSubmit)="onInsert(myForm)">
+                                                <h2 style="text-align: center">Add New Venue City</h2>
+                                        
+                                                <div class="form-group" style="margin-top: 30px;">
+                                                <label for="">Enter Venue City Name</label>
+                                                <input type="text" class="form-control" id="venueCityName" 
+                                                       name="venueCityName" ngModel>
+                                                </div>
+                                                <div class="form-group">
+                                                <button type="submit" class="btn btn-success">Insert</button>  
+                                                </div>
+                                            </form>
+                                        
+                                </div>
+                               
+                                </div> 
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-6"> 
+                </div>   
+                
+                        
+                         
+</body>
+</html>
+

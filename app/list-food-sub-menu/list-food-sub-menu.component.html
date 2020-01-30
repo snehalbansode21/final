@@ -1,0 +1,36 @@
+<div  class="container">
+    <h1 style="text-align: center;">List of Food SubMenu</h1>
+    <br>
+    <a class="btn btn-primary" routerLink="/insert-food-sub-menu">Insert New Food Submenus</a>
+    <hr>
+        <table style="align-content: center;" class="table table-condensed table-striped table-responsive table-hover">
+                <thead>
+                    <th style="text-align: center;">Food SubMenu Id</th>
+                    <th style="text-align: center;">SubMenu Name</th>
+                    <th style="text-align: center;">Cost</th>
+                    <th style="text-align: center;">Food Type</th>
+                    <th style="text-align: center;">Category</th>
+                </thead>
+                <tbody style="text-align: center;">
+                    <tr *ngFor="let item of foodSubMenu">
+                        <td>{{item.foodSubMenuId}}</td>  
+                        <td>{{item.subMenu}}</td>   
+                        <td>{{item.cost}}</td>
+                        <td>{{item.food.foodType}}</td>
+                        <td>{{item.food.category}}</td>
+                        <td>
+                            <a class="btn btn-primary" routerLink="/edit-food-sub-menu/{{item.foodSubMenuId}}"> Edit </a>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" routerLink="/delete-food-sub-menu/{{item.foodSubMenuId}}"> Delete </a>
+                        </td>
+                       
+                    </tr>         
+                </tbody>
+        </table>
+      
+</div>
+
+
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+        body,html {
+                height: 100%;
+                }
+        .bg-img{
+                background-image: url("assets/images/mandap.jpg");
+                margin-top: 0%;
+                min-height: 900px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                }
+        </style>
+</head>
+<body class="bg-img">
+        
+        <!-- <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            </div> -->
+
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        
+                                <div class="container" style="opacity: 0.9; background-color: aliceblue; height: 800px; width: 600px; margin-top:95px; ">
+                                        <form (ngSubmit)="onAdd()">
+                                                        <h2 style="text-align: center">Event Details</h2>
+                                                                <div   class="form-group">
+                                                                        <!-- <select class="btn btn-primary" [(ngModel)]="eventDesc.eventName" >
+                                                                                <option  *ngFor="let item of eventDesc" class="btn btn-default"  >{{item.eventName}}</option>
+                                                                        </select> -->
+                                                                        <label for="selectEvent">Select an Event</label>
+                                                                        <select class="form-control" name="eventDesc" [(ngModel)]="defEventDesc">
+                                                                           <option *ngFor="let item of eventDesc" [value]="item.eventDescId">{{item.eventName}}</option>  
+                                                                        </select>
+                                                                </div>      
+                                            
+                                                                <div class="form-group">
+                                                                <label for="">Event Date</label>
+                                                                <input type="date" class="form-control" id="eventDate" name="eventDate" ngModel>     
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                        <label for="selectVenueCity">Select Venue City</label>
+                                                                        <select (change)="onChangeVenueCity($event.target.value)" class="form-control" name="VenueCity">
+                                                                           <option *ngFor="let item of venuCity" [value]="item.venueCityId">
+                                                                                   {{item.venueCityName}}
+                                                                           </option>  
+                                                                        </select>
+                                                                       
+                                                                </div>
+
+                                                                <div class="form-group" *ngFor="let item of location">
+                                                                                <label for="selectLocation">
+                                                                                  <input id="selectLocation" [value]="item.locationId" type="radio" name="loc" [(ngModel)]="radioSelected">
+                                                                                  <img style="width: 200px;" src="data:image/gif;base64,{{item.locationImage}}" alt="">
+                                                                                </label>
+                                                                
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                <label for="">Enter no of veg guest</label>
+                                                                <input type="number" class="form-control" id="noOfGuestsVeg" name="noOfGuestsVeg" ngModel>         
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                        <label for="">Enter no of non-veg guest</label>
+                                                                        <input type="number" class="form-control" id="noOfGuestsNonVeg" name="noOfGuestsNonVeg" ngModel>         
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                <label for="">Time period</label>
+                                                                <input type="number" class="form-control" id="eventDuration" name="eventDuration" ngModel> 
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="">Decoration Budget</label>
+                                                                        <input type="number" class="form-control" id="decorationBudget" name="decorationBudget" ngModel> 
+                                                                </div>
+                                                                <div class="checkbox">
+                                                                     
+                                                                        <label class="checkbox-inline"><input type="checkbox" value="">Theming</label>
+                                                                        <label class="checkbox-inline"><input type="checkbox" value="">Music System</label>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="">Total Cost </label>
+                                                                        <input readonly type="number" class="form-control" id="cost" name="cost"> 
+                                                                </div>
+                                                        
+                                                                <div class="form-group">
+                                                                <button type="submit" class="btn btn-success">Submit</button>    
+                                                                </div>
+                                                       
+                                                </form>
+                                
+                        </div>
+                      
+                        </div>
+       
+                       
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-6"> 
+                                </div>   
+                         
+</body>
+</html>

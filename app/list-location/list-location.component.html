@@ -1,0 +1,38 @@
+<div  class="container">
+    <h1 style="text-align: center;">Location Details</h1>
+    <br>
+    <a class="btn btn-primary" routerLink="/insert-location">Insert New Location</a>
+    <hr>
+        <table style="align-content: center;" class="table table-condensed table-striped table-responsive table-hover">
+                <thead>
+                    <th style="text-align: center;">Location Id</th>
+                    <th style="text-align: center;">Location Name</th>
+                    <th style="text-align: center;">Location Cost</th>
+                    <th style="text-align: center;">Location Image</th>
+                    <th style="text-align: center;">Venue City</th>
+                        <th></th>
+                        <th></th>
+                </thead>
+                <tbody style="text-align: center;">
+                    <tr *ngFor="let item of location">
+                        <td >{{item.locationId}}</td>  
+                        <td>{{item.locationName}}</td>   
+                        <td>{{item.locationCost}}</td>
+                        <td><img style="width: 200px;" src="data:image/gif;base64,{{item.locationImage}}" alt=""></td>
+                        <td>{{item.venueCity.venueCityName}}</td>
+                        <td>
+                                <a class="btn btn-primary" routerLink="/edit-location/{{item.locationId}}"> Edit </a>
+                            </td>
+                        <td>
+                            <a class="btn btn-danger" routerLink="/delete-location/{{item.locationId}}"> Delete </a>
+                        </td>
+                        
+                    </tr>         
+                </tbody>
+        </table>
+      
+</div>
+
+
+
+

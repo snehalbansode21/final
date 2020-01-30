@@ -1,0 +1,29 @@
+<div  class="container">
+    <h1 style="text-align: center;">Users List</h1>
+    <br>
+        <table style="align-content: center;" class="table table-condensed table-striped table-responsive table-hover">
+                <thead >
+                    <th style="text-align: center;">User Id</th>
+                    <th style="text-align: center;">Name</th>
+                    <th style="text-align: center;">Email</th>
+                    <th style="text-align: center;">Role</th>
+                    <th style="text-align: center;">Mobile No</th>
+                    <th style="text-align: center;"></th>
+                    <th style="text-align: center;"></th>
+                </thead>
+                <tbody style="text-align: center;">
+                    <tr *ngFor="let item of users">
+                        <td>{{item.userId}}</td>  
+                        <td>{{item.name}}</td>   
+                        <td>{{item.email}}</td>
+                        <td>{{item.role}}</td>
+                        <td>{{item.mobNo}}</td>
+
+                        <!-- <td *ngIf="item.role === 'MANAGER'"> 
+                                <a class="btn btn-danger" routerLink="/block-mgr/{{item.userId}}"> Block </a> 
+                        </td> -->
+
+                    </tr>         
+                </tbody>
+              </table>
+</div>

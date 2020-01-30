@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+              .bg-img {
+                          /* The image used */
+                          background-color: azure;
+                          margin-top: 0%;
+                          min-height: 550px;
+                        
+                          /* Center and scale the image nicely */
+                          background-position: center;
+                          background-repeat: no-repeat;
+                          background-size: cover;
+                          position: relative;
+                        }
+                        body,html{
+                          height: 100%;
+                        }
+                                
+                                
+                        </style>
+</head>
+<body class="bg-img">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                 </div>
+                <div style="margin-top: 100px;">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="container" style="opacity: 0.9; background-color:snow; height: 400px; width: 500px; margin-top: 110px">
+                                    <form (ngSubmit) = onUpdate()>
+                                            <h2 style="text-align: center">Edit food Type</h2>
+                                                    <div class="form-group" style="margin-top: 20px;">
+                                                    <label for="">Food Type Id</label>
+                                                    <input type="text" class="form-control" id="foodId" 
+                                                            name="foodId" readonly [(ngModel)]="foodDetails.foodId">
+                                                    </div>
+                                                    <div class="form-group">
+                                                    <label for="">Food Type</label>
+                                                    <input type="text" class="form-control" id="foodType" 
+                                                            name="foodType" [(ngModel)]="foodDetails.foodType">
+                                                    </div>
+                                                    <div class="form-group">
+                                                    <label for="">Category</label>
+                                                    <input type="text" class="form-control" id="category" 
+                                                            name="category"  [(ngModel)]="foodDetails.category">
+                                                    </div>
+                                                    <div class="form-group">
+                                                    <button type="submit" class="btn btn-success">Update</button>  
+                                                    </div>
+                                                    
+                                                   
+                                            
+                                    </form> 
+                                </div>
+                        
+                                </div> 
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-6"> 
+                </div>                           
+</body>
+</html>

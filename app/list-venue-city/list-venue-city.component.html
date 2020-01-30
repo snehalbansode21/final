@@ -1,0 +1,26 @@
+<div  class="container">
+        <h1 style="text-align: center;">List of Venue Cities</h1>
+        <br>
+        <a class="btn btn-primary" routerLink="/insert-venue">Insert New Venue</a>
+        <hr>
+            <table style="align-content: center;" class="table table-condensed table-striped table-responsive table-hover">
+                    <thead>
+                        <th style="text-align: center;">VenueCity Id</th>
+                        <th style="text-align: center;">VenueCity Name</th>
+                    </thead>
+                    <tbody style="text-align: center;">
+                        <tr *ngFor="let item of venueCity">
+                            <td>{{item.venueCityId}}</td>   
+                            <td>{{item.venueCityName}}</td>
+                            <td>
+                                <a class="btn btn-danger" routerLink="/delete-venue/{{item.venueCityId}}">Delete</a>
+                            </td>
+                        </tr>         
+                    </tbody>
+            </table>
+         
+    </div>
+    
+    
+    
+    
